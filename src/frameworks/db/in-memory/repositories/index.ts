@@ -1,1 +1,1 @@
-export * from './contract.repository';
+export * from './contracts.repository';
