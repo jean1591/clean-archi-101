@@ -1,6 +1,6 @@
 import { Contract } from '@entities/entities';
 import { GenericContractRepository } from '@entities/repositories';
-import { contractFactory } from '../factories/contracts.factory';
+import { contractFactory } from '@entities/factories/contracts.factory';
 
 const contracts = [
   contractFactory(),
