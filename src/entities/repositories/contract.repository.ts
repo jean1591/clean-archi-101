@@ -1,8 +1,6 @@
 import { Contract } from '../entities';
-import { GenericBaseRepository } from '@entities/repositories/genericRepository';
 
-export interface GenericContractRepository
-  extends GenericBaseRepository<Contract> {
+export interface GenericContractRepository {
   getAll: () => Promise<Contract[]>;
   getOneById: (id: string) => Promise<Contract>;
 }
