@@ -1,0 +1,9 @@
+# Environments vars
+.env
+
+# compiled output
+/dist
+/node_modules
+
+#
+src/frameworks/db/config/db.config.ts
