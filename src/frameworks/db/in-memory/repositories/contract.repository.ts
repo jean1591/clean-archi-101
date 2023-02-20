@@ -1,12 +1,19 @@
 import { Contract } from '@entities/entities';
 import { GenericContractRepository } from '@entities/repositories';
+import { contractFactory } from '../factories/contracts.factory';
+
+const contracts = [
+  contractFactory(),
+  contractFactory(),
+  contractFactory(),
+  contractFactory(),
+];
 
 export class ContractRepository implements GenericContractRepository {
   async getAll(): Promise<Contract[]> {
-    return [];
+    return contracts;
   }
   async getOneById(contractId: string): Promise<Contract> {
-    console.log('🚀 ~ getOneById ~ contractId', contractId);
-    return {} as Contract;
+    return contracts.find((contract) => contract.id === contractId);
   }
 }
