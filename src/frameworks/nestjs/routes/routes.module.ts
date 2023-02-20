@@ -1,9 +1,9 @@
-import { ContractsControllerFramework } from './contracts.route';
+import { ContractsRoute } from './contracts.route';
 import { Module } from '@nestjs/common';
 
 @Module({
   imports: [],
   providers: [],
-  controllers: [ContractsControllerFramework],
+  controllers: [ContractsRoute],
 })
 export class ControllersModule {}

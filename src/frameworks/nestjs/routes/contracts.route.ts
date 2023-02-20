@@ -5,7 +5,7 @@ import { ContractRepository } from '@frameworks/db/in-memory/repositories';
 import { ContractsController } from '@interface-adapters/controllers';
 
 @Controller('contracts')
-export class ContractsControllerFramework {
+export class ContractsRoute {
   contractRepository = new ContractRepository();
 
   contractsController = new ContractsController(this.contractRepository);
