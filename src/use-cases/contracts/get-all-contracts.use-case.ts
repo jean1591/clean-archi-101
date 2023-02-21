@@ -1,11 +1,11 @@
 import { Contract } from '@entities/entities';
 import { GenericContractRepository } from '@entities/repositories';
 
-export class GetContracts {
+export class GetAllContracts {
   contractRepository: GenericContractRepository;
 
-  constructor(contractRepositoryParam: GenericContractRepository) {
-    this.contractRepository = contractRepositoryParam;
+  constructor(contractRepositoryImplementation: GenericContractRepository) {
+    this.contractRepository = contractRepositoryImplementation;
   }
 
   async execute(): Promise<Contract[]> {

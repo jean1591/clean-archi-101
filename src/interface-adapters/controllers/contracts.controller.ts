@@ -1,4 +1,4 @@
-import { GetContractById, GetContracts } from '@use-cases/contracts';
+import { GetAllContracts, GetContractById } from '@use-cases/contracts';
 
 import { Contract } from '@entities/entities';
 import { GenericContractRepository } from '@entities/repositories';
@@ -6,12 +6,12 @@ import { GenericContractRepository } from '@entities/repositories';
 export class ContractsController {
   contractRepository: GenericContractRepository;
 
-  constructor(contractRepositoryParams: GenericContractRepository) {
-    this.contractRepository = contractRepositoryParams;
+  constructor(contractRepositoryImplementation: GenericContractRepository) {
+    this.contractRepository = contractRepositoryImplementation;
   }
 
   async getContracts(): Promise<Contract[]> {
-    const useCase = new GetContracts(this.contractRepository);
+    const useCase = new GetAllContracts(this.contractRepository);
 
     return useCase.execute();
   }
